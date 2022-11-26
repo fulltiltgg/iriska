@@ -1,0 +1,33 @@
+{
+  "name": "iriska",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dbInit": "node src/dbInit.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightyflyy/iriska.git"
+  },
+  "author": "fulltiltgg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nightyflyy/iriska/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/nightyflyy/iriska#readme",
+  "dependencies": {
+    "@grammyjs/i18n": "^1.0.1",
+    "chalk": "^5.1.2",
+    "dotenv": "^16.0.3",
+    "envalid": "^7.3.1",
+    "grammy": "^1.12.0",
+    "grammy-middlewares": "^1.0.11",
+    "sequelize": "^6.25.8",
+    "source-map-support": "^0.5.21",
+    "sqlite3": "^5.1.2"
+  }
+}

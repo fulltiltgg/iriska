@@ -1,0 +1,1 @@
+start = Wow, this is locale!
