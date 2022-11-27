@@ -13,11 +13,16 @@ for (let commandName of commandsList) {
 	const command = await import(`./../commands/${commandName}`);
 
  	commands.set(command.default.data.name, command.default);
+
+ 	for (const alias of command.default?.aliases) {
+ 		commands.set(alias, command.default);
+ 	}
 }
 
 async function handleMessage(ctx, next) {
-	const args = ctx.msg.text.slice(ctx.msg.entities?.type === 'bot_command' ? 1 : 0 ).trim().split(' ');
+	const args = ctx.msg.text/*.slice(0)*/.trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
+
 
 	const command = commands.get(commandName);
 
