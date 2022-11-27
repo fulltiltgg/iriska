@@ -1,11 +1,11 @@
 const command = {
 	data: {
 		name: '/start',
-		aliases: ['start', 'help', 'старт', 'помощь'],
+		aliases: ['start', 'help', 'старт', 'помощь', 'хелп'],
 	},
 	
 	async execute(ctx, args) {
-		ctx.reply(ctx.t('start'));
+		ctx.replyi18n('start');
 	},
 };
 

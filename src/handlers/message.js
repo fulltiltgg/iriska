@@ -14,7 +14,7 @@ for (let commandName of commandsList) {
 
  	commands.set(command.default.data.name, command.default);
 
- 	for (const alias of command.default?.aliases) {
+ 	for (const alias of command.default.data?.aliases||[]) {
  		commands.set(alias, command.default);
  	}
 }
